@@ -9,7 +9,7 @@ module CampaignMonitorSubscriber
     require 'campaigning'
 
     def subcribe_me_using(email_field)
-      # return unless RAILS_ENV == 'production'
+      return unless RAILS_ENV == 'production'
 
       after_create do |record|
         begin

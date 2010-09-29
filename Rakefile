@@ -1,13 +1,13 @@
 # -*- ruby -*-
-
 require 'rubygems'
-require 'hoe'
+require 'rake'
+require 'echoe'
 
-Hoe.spec 'campaign_monitor_subscriber' do |p|
-  # self.rubyforge_name = 'campaign_monitor_subscriberx' # if different than 'campaign_monitor_subscriber'
-  p.developer('Gary Greyling', 'gary@mpowered.co.za')
-  p.version = "1.0.0"
-  p.extra_deps = [['campaigning', '>= 0.15.0']]
+Echoe.new('campaign_monitor_subscriber', '0.5.0') do |p|
+  p.description    = "Sync user emails with Campaign Monitor mailing lists"
+  p.url            = "http://github.com/mpowered/campaign_monitor_subscriber"
+  p.author         = "Gary Greyling"
+  p.email          = "gary@mpowered.co.za"
+  p.ignore_pattern = ["tmp/*", "script/*"]
+  p.development_dependencies = [['campaigning', '>= 0.15.0']]
 end
-
-# vim: syntax=ruby
