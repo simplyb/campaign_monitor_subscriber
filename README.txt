@@ -1,0 +1,58 @@
+= campaign_monitor_subscriber
+
+http://www.github.com/mpowered
+
+== DESCRIPTION:
+
+Automatically push a model's email address to a Campaign Monitor mailing list on create and remove it on destroy.
+
+== FEATURES/PROBLEMS:
+
+* Push email addresses to CM on create
+* Delete email address from CM on destroy
+
+== SYNOPSIS:
+
+Specify the model's email address field name:
+Class User < ActiveRecord::Base
+  subscribe_me_using :email
+end
+
+Set the list id & api key in config/campaign_monitor_subscriber_config.yml:
+list_id: 12oeu0089oe8gf9794oe498587o5
+api_key: 23rbmoe351sd123d12134hbi1234
+
+Thats it!
+
+== REQUIREMENTS:
+
+* campaigning gem
+
+== INSTALL:
+
+sudo gem install campaign_monitor_subscriber
+
+== LICENSE:
+
+(The MIT License)
+
+Copyright (c) 2010 FIX
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
