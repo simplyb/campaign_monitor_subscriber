@@ -33,7 +33,3 @@ module CampaignMonitorSubscriber
       end
   end
 end
-
-class ActiveRecord::Base
-  include CampaignMonitorSubscriber
-end
